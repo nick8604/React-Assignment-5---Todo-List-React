@@ -28,7 +28,7 @@ const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
             {todo.isEditing ? (
                 <>
                     <textarea className="editTask" defaultValue={TodoValue} onChange={changeTodoValue}></textarea>
-                    <button className="saveTask" onClick={finishEdit}>Update Todo</button>
+                    <button className="saveTask" onClick={finishEdit}>Save</button>
                 </>
 
             ) : (

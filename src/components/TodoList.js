@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
+import '../styles/TodoList.css'
 
 function TodoList({todos, deleteTodo, startEditing, finishEditing}) {
     const items = todos.map(function(single_todo) {
@@ -8,7 +9,7 @@ function TodoList({todos, deleteTodo, startEditing, finishEditing}) {
 
     return (
         <div>
-            <ul>
+            <ul className="container">
                 {items}
             </ul>
         </div>

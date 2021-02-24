@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/TodoAdd.css'
 
 function TodoAdd({addTodo}) {
     let TodoValue = "";
@@ -15,7 +16,7 @@ function TodoAdd({addTodo}) {
         
     }
     return (
-        <div>
+        <div className="grid-container">
             <textarea id="task" onChange={updateTodoValue}></textarea>
             <br/>
             <button id="btn" onClick={submitTodo}>Add New</button>
