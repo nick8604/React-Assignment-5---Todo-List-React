@@ -33,7 +33,7 @@ const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
 
             ) : (
                     <>
-                        {todo.value} (<a href="#" onClick={startEdit}>Edit</a> | <a href="#" onClick={deleteItem}>Delete</a>)
+                        {todo.value} <button className="edit" onClick={startEdit}>Edit</button> | <button className="delete" onClick={deleteItem}>Delete</button>
                     </>
 
                 )}
