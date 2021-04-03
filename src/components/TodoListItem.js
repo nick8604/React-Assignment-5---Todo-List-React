@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
-    // let TodoValue = todo.value;
+    
     const [todoValue, setTodoValue] = useState(todo.value);
 
     const deleteItem = () => {
@@ -13,19 +13,13 @@ const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
     }
 
     const changeTodoValue = e => {
-        // TodoValue = e.target.value;
         setTodoValue(e.target.value);
     }
 
     const finishEdit = () => {
-        // if(TodoValue.trim()) {
-        //     todo.value = TodoValue.trim();
-        //     todo.isEditing = false;
-        //     finishEditing(todo);
-        // }
 
-        if(todoValue.trim()) {
-            todo.value = todoValue.trim();
+        if(todoValue) {
+            todo.value = todoValue;
             todo.isEditing = false;
             finishEditing(todo);
         }
