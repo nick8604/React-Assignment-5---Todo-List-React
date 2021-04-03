@@ -18,8 +18,8 @@ const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
 
     const finishEdit = () => {
 
-        if(todoValue) {
-            todo.value = todoValue;
+        if(todoValue.trim()) {
+            todo.value = todoValue.trim();
             todo.isEditing = false;
             finishEditing(todo);
         }
@@ -30,7 +30,7 @@ const TodoListItem = ({ todo, deleteTodo, startEditing, finishEditing }) => {
         <li className="list">
             {todo.isEditing ? (
                 <>
-                    <textarea className="editTask" defaultValue={todoValue} onChange={changeTodoValue}></textarea>
+                    <textarea className="editTask" defaultValue={todoValue.trim()} onChange={changeTodoValue}></textarea>
                     <button className="saveTask" onClick={finishEdit}>Save</button>
                 </>
 
