@@ -46,10 +46,13 @@ function TodoContainer() {
     }
 
     const finishEditing = todo => {
+        if(item.id==""){
+            return(alert("cannot empty")
+                   }else(
         const editing_arr = todos.map((item) => {
             if(item.id == todo.id) {
                 return todo;
-            }
+            })
             return item;
         });
         setTodos(editing_arr);
